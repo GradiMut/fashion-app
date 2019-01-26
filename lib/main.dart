@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'secondpage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -164,16 +165,23 @@ class _MyHomePageState extends State<MyHomePage> {
                     SizedBox(height: 10.0),
                     Row(
                       children: <Widget>[
-                        Hero(
-                          tag: 'assets/modelgrid1.jpeg',
-                          child: Container(
-                            height: 200.0,
-                            width: (MediaQuery.of(context).size.width - 50.0) / 2,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5.0),
-                              image: DecorationImage(
-                                image: AssetImage('assets/modelgrid1.jpeg'),
-                                fit: BoxFit.cover
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SecondPage(heroTag: 'assets/modelgrid1.jpeg')
+                            ));
+                          },
+                         child: Hero(
+                            tag: 'assets/modelgrid1.jpeg',
+                            child: Container(
+                              height: 200.0,
+                              width: (MediaQuery.of(context).size.width - 50.0) / 2,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5.0),
+                                image: DecorationImage(
+                                  image: AssetImage('assets/modelgrid1.jpeg'),
+                                  fit: BoxFit.cover
+                                ),
                               ),
                             ),
                           ),
@@ -181,32 +189,46 @@ class _MyHomePageState extends State<MyHomePage> {
                         SizedBox(width: 10.0),
                         Column(
                           children: <Widget>[
-                            Hero(
-                              tag: 'assets/modelgrid2.jpeg',
-                              child: Container(
-                                height: 95.0,
-                                width: (MediaQuery.of(context).size.width - 100.0) / 2,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5.0),
-                                  image: DecorationImage(
-                                    image: AssetImage('assets/modelgrid2.jpeg'),
-                                    fit: BoxFit.cover
-                                  )
+                            InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => SecondPage(heroTag: 'assets/modelgrid2.jpeg')
+                                ));
+                              },
+                              child: Hero(
+                                tag: 'assets/modelgrid2.jpeg',
+                                child: Container(
+                                  height: 95.0,
+                                  width: (MediaQuery.of(context).size.width - 100.0) / 2,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5.0),
+                                    image: DecorationImage(
+                                      image: AssetImage('assets/modelgrid2.jpeg'),
+                                      fit: BoxFit.cover
+                                    )
+                                  ),
                                 ),
                               ),
                             ),
                             SizedBox(height: 10.0),
-                            Hero(
-                              tag: 'assets/modelgrid3.jpeg',
-                              child: Container(
-                                height: 95.0,
-                                width: (MediaQuery.of(context).size.width - 100.0) / 2,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5.0),
-                                  image: DecorationImage(
-                                    image: AssetImage('assets/modelgrid3.jpeg'),
-                                    fit: BoxFit.cover
-                                  )
+                            InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => SecondPage(heroTag: 'assets/modelgrid3.jpeg')
+                                ));
+                              },
+                              child: Hero(
+                                tag: 'assets/modelgrid3.jpeg',
+                                child: Container(
+                                  height: 95.0,
+                                  width: (MediaQuery.of(context).size.width - 100.0) / 2,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5.0),
+                                    image: DecorationImage(
+                                      image: AssetImage('assets/modelgrid3.jpeg'),
+                                      fit: BoxFit.cover
+                                    )
+                                  ),
                                 ),
                               ),
                             )
